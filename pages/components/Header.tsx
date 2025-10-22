@@ -51,10 +51,7 @@ export default function Header() {
           <div className="brand">
             <Link href="/" className="logo" onClick={() => setMenuOpen(false)}>
               {/* simple logo */}
-              <svg width="32" height="32" viewBox="0 0 24 24" fill="none" aria-hidden>
-                <circle cx="12" cy="12" r="10" stroke="currentColor" strokeWidth="1.5" />
-                <path d="M7 12h10" stroke="currentColor" strokeWidth="1.5" strokeLinecap="round" />
-              </svg>
+              
               <span>My Portfolio</span>
             </Link>
           </div>
