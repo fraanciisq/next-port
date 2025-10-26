@@ -20,7 +20,7 @@ const Home: NextPage = () => {
         <ProfileHeader
           name="John Francis Tamondong"
           location="Legazpi City, Philippines"
-          title="AI Engineer | Automation Specialist"
+          title="AI Engineer | Automation Specialist | Python Developer"
           avatarSrc="/avatar.jpg"
         />
 
