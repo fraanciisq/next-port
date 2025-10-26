@@ -40,7 +40,7 @@ const Home: NextPage = () => {
           <div className="order-1 lg:order-2 lg:col-span-2 space-y-6">
             <Card>
               <h2 className="text-lg font-semibold mb-2">About</h2>
-              <p className="text-sm text-gray-600">
+              <p className="text-sm text-gray-600 text-justify">
                 Hi! I'm Francis, a passionate and driven AI Engineer with a strong focus on AI automation and Retrieval-Augmented Generation (RAG) system development. Leveraging tools like DeepSeek, n8n, LangChain, Supabase and MongoDB Atlas, I design intelligent solutions that combine cutting-edge AI with scalable automation workflows.
               </p>
             </Card>
