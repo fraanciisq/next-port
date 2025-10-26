@@ -31,9 +31,20 @@ export const ProfileHeader: React.FC<{
         <div className="mt-3 text-gray-700">{title}</div>
 
         <div className="mt-4 flex flex-wrap items-center gap-3">
-          <Button variant="primary" startIcon={<CalendarIcon />}>
+          <Button 
+          variant="primary" 
+          startIcon={<CalendarIcon />}
+ 
+    onClick={() => {
+      window.open("https://calendly.com/johnfrancistm/30min", "_blank");
+    }}
+  >
+    
             Schedule a Call
+            
           </Button>
+
+          
 
           <Button href="mailto:johnfrancistm@gmail.com" startIcon={<MailIcon />}>
             Send Email
