@@ -4,6 +4,7 @@ import React from "react";
 import { ProfileHeader } from "./components/ProfileHeader";
 import { Card } from "./components/Card";
 import { ExperienceList, Experience } from "./components/ExperienceList";
+import ProjectsCard from "./components/Projects";
 
 const experiences: Experience[] = [
   { title: "AI Engineer", org: "Racutech", year: "2025" },
@@ -36,7 +37,8 @@ const Home: NextPage = () => {
             </Card>
           </div>
 
-          {/* RIGHT column on lg (Main content) */}
+          {/* Projects Section */}
+          
           <div className="order-1 lg:order-2 lg:col-span-2 space-y-6">
             <Card>
               <h2 className="text-lg font-semibold mb-2">About</h2>
@@ -45,12 +47,37 @@ const Home: NextPage = () => {
               </p>
             </Card>
 
-            <Card>
-              <h2 className="text-lg font-semibold mb-4">Tech Stack</h2>
-              <div className="text-sm text-gray-600">
-                JavaScript, TypeScript, React, Next.js, Tailwind CSS, Node.js, Python ...
-              </div>
-            </Card>
+        <Card>
+  <h2 className="text-lg font-semibold mb-4">Projects and Case Studies</h2>
+  <div className="text-sm text-gray-600 mb-4">
+    DeepSeek, OpenAI, N8N, Python, FastAPI, LangChain, Pinecone, Supabase, MongoDB ...
+  </div>
+
+  <ProjectsCard
+    projects={[
+      {
+        title: "HR Agent for AI Resume Screening",
+        description: "Built an AI-powered appointment scheduling system for a dental clinic using ElevenLabs AI Agent, Google Calendar, and n8n.",
+        image: "/images/hr-ai.jpg",
+      },
+      {
+        title: "RAG Agent Vectorizing Files",
+        description: "The solution is designed to help both clients and companies develop an AI agent tailored to their internal context, allowing the system to provide more accurate, domain-specific responses while streamlining automation and knowledge management.",
+        image: "/images/rag-supabase.jpg",
+      },
+      {
+        title: "Dental Clinic AI Agent using ElevenLabs",
+        description: "Built an AI-powered appointment scheduling system for a dental clinic using ElevenLabs AI Agent, Google Calendar, and n8n.",
+        image: "/images/dental-ai.jpg",
+      },
+      {
+        title: "Pinecone AI RAG Agent",
+        description: "An intelligent Retrieval-Augmented Generation (RAG) agent designed for Eco Pro Pest Management Services.",
+        image: "/images/pinecone-rag.jpg",
+      },
+    ]}
+  />
+</Card>
           </div>
         </div>
       </div>
