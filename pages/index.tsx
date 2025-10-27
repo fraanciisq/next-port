@@ -5,6 +5,7 @@ import { ProfileHeader } from "./components/ProfileHeader";
 import { Card } from "./components/Card";
 import { ExperienceList, Experience } from "./components/ExperienceList";
 import ProjectsCard from "./components/Projects";
+import Badges from "./components/Badges";
 
 const experiences: Experience[] = [
   { title: "AI Engineer", org: "Racutech", year: "2025" },
@@ -33,7 +34,7 @@ const Home: NextPage = () => {
             </Card>
 
             <Card>
-              <div className="text-sm text-gray-500">Additional widgets or links</div>
+              <Badges />
             </Card>
           </div>
 
