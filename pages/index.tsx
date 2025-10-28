@@ -1,15 +1,15 @@
 // pages/index.tsx
 import type { NextPage } from "next";
 import React from "react";
-import { ProfileHeader } from "./components/ProfileHeader";
-import { Card } from "./components/Card";
-import { ExperienceList, Experience } from "./components/ExperienceList";
-import ProjectsCard from "./components/Projects";
-import Badges from "./components/Badges";
+import { ProfileHeader } from "../components/ProfileHeader";
+import { Card } from "../components/Card";
+import { ExperienceList, Experience } from "../components/ExperienceList";
+import ProjectsCard from "../components/Projects";
+import Badges from "../components/Badges";
 import Link from "next/link";
-import Education from "./components/Education";
-import CertificatesCarousel from "./components/CertificatesCarousel";
-import Footer from "./components/Footer";
+import Education from "../components/Education";
+import CertificatesCarousel from "../components/CertificatesCarousel";
+import Footer from "../components/Footer";
 
 
 const experiences: Experience[] = [
