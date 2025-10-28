@@ -1,4 +1,6 @@
+"use client";
 import React from "react";
+import Link from "next/link";
 
 const badges = [
   { 
@@ -20,7 +22,7 @@ const badges = [
 
 export default function Badges() {
   return (
-    <div className="space-y-3">
+    <div className="relative space-y-3 pb-8">
       <h3 className="text-lg font-semibold text-gray-800">Badges</h3>
 
       <div className="space-y-2">
@@ -45,6 +47,16 @@ export default function Badges() {
             </span>
           </a>
         ))}
+      </div>
+
+      {/* Centered black "Show More" button */}
+      <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
+        <Link
+          href="/about"
+          className="text-xs px-4 py-1.5 rounded-md bg-black text-white hover:bg-gray-800 transition"
+        >
+          Show More
+        </Link>
       </div>
     </div>
   );
