@@ -52,7 +52,9 @@ export default function Badges() {
       {/* Centered black "Show More" button */}
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
         <Link
-          href="/about"
+          href="https://www.linkedin.com/in/francis-tamondong/details/certifications/"
+          target="_blank"
+          rel="noopener noreferrer"
           className="inline-block text-xs px-3 py-1 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition"
         >
           Show More
