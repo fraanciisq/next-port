@@ -9,6 +9,7 @@ import Badges from "./components/Badges";
 import Link from "next/link";
 import Education from "./components/Education";
 import CertificatesCarousel from "./components/CertificatesCarousel";
+import Footer from "./components/Footer";
 
 
 const experiences: Experience[] = [
@@ -118,8 +119,11 @@ const Home: NextPage = () => {
         <div className="mt-10">
           <CertificatesCarousel />
         </div>
-
     
+         <div >
+        <Footer />
+        </div>
+            
       </div>
     </div>
   );
