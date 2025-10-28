@@ -92,14 +92,16 @@ const Home: NextPage = () => {
   />
 
   {/* "Show More" button centered below the projects */}
-  <div className="flex justify-center mt-4">
-    <Link
-      href="/about"
-      className="inline-block text-xs px-3 py-1 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition"
-    >
-      Show More
-    </Link>
-  </div>
+<div className="flex justify-center mt-4">
+  <Link
+    href="https://www.linkedin.com/in/francis-tamondong/details/projects/"
+    target="_blank"
+    rel="noopener noreferrer"
+    className="inline-block text-xs px-3 py-1 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition"
+  >
+    Show More
+  </Link>
+</div>
 </Card>
           </div>
         </div>
