@@ -32,7 +32,7 @@ const SocialKeys = () => {
   ];
 
   return (
-    <div className="flex gap-3">
+    <div className="hidden md:flex gap-3">
       <audio ref={audioRef} src="/sounds/click.mp3" preload="auto" />
 
       {socials.map((s, i) => (

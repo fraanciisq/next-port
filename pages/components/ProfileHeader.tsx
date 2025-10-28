@@ -43,7 +43,7 @@ export const ProfileHeader: React.FC<{
 
         <div className="mt-3 text-gray-700">{title}</div>
 
-        <div className="mt-4 flex flex-wrap items-center gap-3">
+        <div className="mt-4 hidden md:flex flex-wrap items-center gap-3">
           <Button
             variant="primary"
             startIcon={<CalendarIcon />}
@@ -58,14 +58,7 @@ export const ProfileHeader: React.FC<{
             Send Email
           </Button>
 
-          <Button
-            href="https://www.linkedin.com/in/francis-tamondong/"
-            startIcon={<CommunityIcon />}
-            target="_blank"
-            rel="noopener noreferrer"
-          >
-            Visit my LinkedIn Profile
-          </Button>
+   
 
           {/* ✅ Social Buttons including Dog Button */}
           <div className="ml-auto flex items-center gap-3">
