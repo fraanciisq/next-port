@@ -6,6 +6,8 @@ import { Card } from "./components/Card";
 import { ExperienceList, Experience } from "./components/ExperienceList";
 import ProjectsCard from "./components/Projects";
 import Badges from "./components/Badges";
+import Link from "next/link";
+import Education from "./components/Education";
 
 const experiences: Experience[] = [
   { title: "AI Engineer", org: "Racutech", year: "2025" },
@@ -36,6 +38,10 @@ const Home: NextPage = () => {
             <Card>
               <Badges />
             </Card>
+            
+            <Card>
+              <Education />
+            </Card>
           </div>
 
           {/* Projects Section */}
@@ -47,9 +53,11 @@ const Home: NextPage = () => {
                 Hi! I'm Francis, a passionate and driven AI Engineer with a strong focus on AI automation and Retrieval-Augmented Generation (RAG) system development. Leveraging tools like DeepSeek, n8n, LangChain, Supabase and MongoDB Atlas, I design intelligent solutions that combine cutting-edge AI with scalable automation workflows.
               </p>
             </Card>
+<Card>
+  <h2 className="text-lg font-semibold mb-4">
+    Projects and Case Studies
+  </h2>
 
-        <Card>
-  <h2 className="text-lg font-semibold mb-4">Projects and Case Studies</h2>
   <div className="text-sm text-gray-600 mb-4">
     DeepSeek, OpenAI, N8N, Python, FastAPI, LangChain, Pinecone, Supabase, MongoDB ...
   </div>
@@ -58,26 +66,40 @@ const Home: NextPage = () => {
     projects={[
       {
         title: "HR Agent for AI Resume Screening",
-        description: "Built an AI-powered appointment scheduling system for a dental clinic using ElevenLabs AI Agent, Google Calendar, and n8n.",
+        description:
+          "Built an AI-powered appointment scheduling system for a dental clinic using ElevenLabs AI Agent, Google Calendar, and n8n.",
         image: "/images/hr-ai.jpg",
       },
       {
         title: "RAG Agent Vectorizing Files",
-        description: "The solution is designed to help both clients and companies develop an AI agent tailored to their internal context, allowing the system to provide more accurate, domain-specific responses while streamlining automation and knowledge management.",
+        description:
+          "The solution is designed to help both clients and companies develop an AI agent tailored to their internal context, allowing the system to provide more accurate, domain-specific responses while streamlining automation and knowledge management.",
         image: "/images/rag-supabase.jpg",
       },
       {
         title: "Dental Clinic AI Agent using ElevenLabs",
-        description: "Built an AI-powered appointment scheduling system for a dental clinic using ElevenLabs AI Agent, Google Calendar, and n8n.",
+        description:
+          "Built an AI-powered appointment scheduling system for a dental clinic using ElevenLabs AI Agent, Google Calendar, and n8n.",
         image: "/images/dental-ai.jpg",
       },
       {
         title: "Pinecone AI RAG Agent",
-        description: "An intelligent Retrieval-Augmented Generation (RAG) agent designed for Eco Pro Pest Management Services.",
+        description:
+          "An intelligent Retrieval-Augmented Generation (RAG) agent designed for Eco Pro Pest Management Services.",
         image: "/images/pinecone-rag.jpg",
       },
     ]}
   />
+
+  {/* "Show More" button centered below the projects */}
+  <div className="flex justify-center mt-4">
+    <Link
+      href="/about"
+      className="inline-block text-xs px-3 py-1 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition"
+    >
+      Show More
+    </Link>
+  </div>
 </Card>
           </div>
         </div>

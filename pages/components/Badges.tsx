@@ -53,7 +53,7 @@ export default function Badges() {
       <div className="absolute bottom-0 left-1/2 transform -translate-x-1/2">
         <Link
           href="/about"
-          className="text-xs px-4 py-1.5 rounded-md bg-black text-white hover:bg-gray-800 transition"
+          className="inline-block text-xs px-3 py-1 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition"
         >
           Show More
         </Link>
