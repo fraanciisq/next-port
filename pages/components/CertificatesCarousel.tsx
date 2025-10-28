@@ -1,6 +1,7 @@
 "use client";
 import React, { useRef, useState } from "react";
 import Image from "next/image";
+import { ChevronLeft, ChevronRight } from "lucide-react";
 
 type Certificate = {
   src: string;
@@ -9,9 +10,6 @@ type Certificate = {
 
 const CertificatesCarousel = () => {
   const scrollRef = useRef<HTMLDivElement>(null);
-  const [isDragging, setIsDragging] = useState(false);
-  const [startX, setStartX] = useState(0);
-  const [scrollLeft, setScrollLeft] = useState(0);
   const [selectedCert, setSelectedCert] = useState<Certificate | null>(null);
 
   const certificates: Certificate[] = [
@@ -25,40 +23,43 @@ const CertificatesCarousel = () => {
     { src: "/certificates/cert8.jpg", title: "Frontend Certificate" },
   ];
 
-  // Drag behavior
-  const handleMouseDown = (e: React.MouseEvent) => {
+  // Manual scroll via arrow buttons
+  const scrollByAmount = (amount: number) => {
     if (!scrollRef.current) return;
-    setIsDragging(true);
-    setStartX(e.pageX - scrollRef.current.offsetLeft);
-    setScrollLeft(scrollRef.current.scrollLeft);
-  };
-
-  const handleMouseUp = () => setIsDragging(false);
-  const handleMouseLeave = () => setIsDragging(false);
-
-  const handleMouseMove = (e: React.MouseEvent) => {
-    if (!isDragging || !scrollRef.current) return;
-    e.preventDefault();
-    const x = e.pageX - scrollRef.current.offsetLeft;
-    const walk = (x - startX) * 1.2;
-    scrollRef.current.scrollLeft = scrollLeft - walk;
+    scrollRef.current.scrollBy({ left: amount, behavior: "smooth" });
   };
 
   return (
     <section className="mt-10 w-full bg-white/50 py-1 select-none">
-      <div className="max-w-6xl mx-auto px-4 bg-white rounded-xl shadow p-1 border border-gray-200">
-        <h2 className="text-lg font-semibold mb-6 text-gray-800 text-center">
-          Certificates and Licenses
-        </h2>
+      <div className="relative max-w-6xl mx-auto px-4 bg-white rounded-xl shadow p-1 border border-gray-200">
+        {/* Header with arrows */}
+        <div className="flex items-center justify-between mb-6 px-2">
+          <h2 className="text-lg font-semibold text-gray-800 text-center flex-1">
+            Certificates and Licenses
+          </h2>
 
-        {/* Carousel */}
+          <div className="flex gap-2 absolute right-4">
+            <button
+              onClick={() => scrollByAmount(-300)}
+              className="p-1 rounded-full border border-gray-300 bg-gray-50 hover:bg-gray-100 transition"
+              aria-label="Scroll Left"
+            >
+              <ChevronLeft size={12} />
+            </button>
+            <button
+              onClick={() => scrollByAmount(300)}
+              className="p-1 rounded-full border border-gray-300 bg-gray-50 hover:bg-gray-100 transition"
+              aria-label="Scroll Right"
+            >
+              <ChevronRight size={12} />
+            </button>
+          </div>
+        </div>
+
+        {/* Carousel (no drag) */}
         <div
           ref={scrollRef}
-          className="relative w-full overflow-x-scroll whitespace-nowrap scrollbar-hide cursor-grab active:cursor-grabbing"
-          onMouseDown={handleMouseDown}
-          onMouseLeave={handleMouseLeave}
-          onMouseUp={handleMouseUp}
-          onMouseMove={handleMouseMove}
+          className="relative w-full overflow-x-scroll whitespace-nowrap scrollbar-hide"
         >
           <div className="flex gap-6 pb-4">
             {certificates.map((cert, index) => (
