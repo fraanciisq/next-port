@@ -54,11 +54,7 @@ const Home: NextPage = () => {
             <Card>
               <h2 className="text-lg font-semibold mb-2">About</h2>
               <p className="text-sm text-gray-600 text-justify">
-                Hi! I'm Francis, a passionate and driven AI Engineer with a strong
-                focus on AI automation and Retrieval-Augmented Generation (RAG)
-                system development. Leveraging tools like DeepSeek, n8n, LangChain,
-                Supabase, and MongoDB Atlas, I design intelligent solutions that
-                combine cutting-edge AI with scalable automation workflows.
+                Hi! I'm Francis, I worked with a U.S based company as an AI Engineer and Automation Enterprise Architect with a strong focus on AI and Retrieval-Augmented Generation (RAG) system development. Leveraging tech tools like DeepSeek, OpenAI, n8n, Zapier, LangChain, Supabase and MongoDB Atlas, I design intelligent solutions that combine cutting-edge AI with scalable automation workflows. These includes workflows for CRM’s like HubSpot, Salesforce, Zoho. Also implementing solutions to streamline and remove repetitive tasks with the company ERP’s, ATS and other management / team tools like ClickUp, Jira, Google Space and many more.
               </p>
             </Card>
 
