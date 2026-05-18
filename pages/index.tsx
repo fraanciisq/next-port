@@ -99,12 +99,12 @@ const Home: NextPage = () => {
 
               <div className="flex justify-center mt-4">
                 <Link
-                  href="https://www.linkedin.com/in/francis-tamondong/details/projects/"
-                  target="_blank"
-                  rel="noopener noreferrer"
+                  href="/projects"
+                 
+                  
                   className="inline-block text-xs px-3 py-1 border border-gray-300 rounded-md text-gray-600 hover:bg-gray-100 transition"
                 >
-                  Show More
+                   Show All Projects
                 </Link>
               </div>
             </Card>
